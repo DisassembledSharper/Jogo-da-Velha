@@ -361,16 +361,17 @@ public class Main extends javax.swing.JFrame {
         }else if(vals[0][1] == 0 && vals[1][1] == 0 && vals[2][1] == 0){
             lblRes.setText("O ganhou");
             enabledFalse();
-        }else if(vals[2][0] == 0 && vals[2][1] == 0 && vals[2][2] == 0){
+        }else if(vals[0][2] == 0 && vals[1][2] == 0 && vals[2][2] == 0){
             lblRes.setText("O ganhou");
             enabledFalse();
+            
         }else if(vals[0][0] == 1 && vals[1][0] == 1 && vals[2][0] == 1){
             lblRes.setText("X ganhou");
             enabledFalse();
         }else if(vals[0][1] == 1 && vals[1][1] == 1 && vals[2][1] == 1){
             lblRes.setText("X ganhou");
             enabledFalse();
-        }else if(vals[2][0] == 1 && vals[2][1] == 1 && vals[2][2] == 1){
+        }else if(vals[0][2] == 1 && vals[1][2] == 1 && vals[2][2] == 1){
             lblRes.setText("X ganhou");
             enabledFalse();
             //Diagonal
@@ -406,6 +407,7 @@ public class Main extends javax.swing.JFrame {
         boolean retorno;
         if (btn1.isEnabled() == false && btn2.isEnabled() == false && btn3.isEnabled() == false && btn4.isEnabled() == false && btn5.isEnabled() == false && btn6.isEnabled() == false && btn7.isEnabled() == false && btn8.isEnabled() == false && btn9.isEnabled() == false ){
             retorno = true;
+            
         }else retorno = false;
         return retorno;
     }
